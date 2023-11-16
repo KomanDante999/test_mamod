@@ -1,0 +1,66 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* 700 */
+@font-face {
+  font-family: "Montserrat";
+  src: url(../public/fonts/Montserrat-Bold.woff2);
+  font-weight: bold;
+}
+/* 500 */
+@font-face {
+  font-family: "Montserrat";
+  src: url(../public/fonts/Montserrat-Medium.woff2);
+  font-weight: 500;
+}
+/* 400 */
+@font-face {
+  font-family: "Montserrat";
+  src: url(../public/fonts/Montserrat-Regular.woff2);
+  font-weight: normal;
+}
+
+@layer components {
+  .body-style {
+    @apply font-montserrat bg-neutral-100;
+  }
+  .main-container {
+    @apply flex;
+  }
+
+  /* registration form */
+  .reg-form {
+    @apply w-full max-w-[960px] min-w-[320px] py-4 bg-white rounded-2xl;
+  }
+  .reg-form__container {
+    @apply pl-[34px] pr-[15px];
+  }
+  .reg-form__label {
+    @apply relative pb-[18px];
+  }
+  /* .reg-form__input {
+    @apply w-full  border border-borderInput  rounded-xl;
+  } */
+  .reg-form__error-message {
+    @apply absolute pt-[2px] font-normal text-xs text-textError;
+  }
+
+  /* base checkbox switch */
+  .switch {
+    @apply relative block w-[39px] h-[19px] bg-checkbox opacity-60 rounded-full cursor-pointer transition-opacity;
+  }
+  .switch::after {
+    @apply content-[''] absolute top-0 left-0 block w-[19px] h-[19px] bg-white rounded-full transition-transform;
+  }
+  .is-enabled-switch {
+    @apply opacity-100;
+  }
+  .is-enabled-switch::after {
+    @apply translate-x-5;
+  }
+}
+/* btn */
+.button-disabled {
+  @apply opacity-60 cursor-not-allowed pointer-events-none;
+}
