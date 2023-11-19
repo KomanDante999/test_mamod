@@ -19,7 +19,7 @@ try {
 
   // Force push на ветку gh-pages, а не на master
   execSync(
-    "git push -f https://github.com/KomanDante999/mamod-test.git HEAD:gh-pages",
+    "git push -f https://github.com/KomanDante999/test_mamod.git HEAD:gh-pages",
     { cwd: absolutePath }
   );
 
